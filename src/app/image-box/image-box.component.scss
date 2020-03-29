@@ -1,0 +1,36 @@
+#image-box {
+  width: 100%;
+  max-width: 600px;
+  background:black;
+  padding: 10px;
+  display:flex;
+  margin: auto;
+  img{
+    width: 100%;
+  }
+  li{
+    color:white;
+    font-family: 'Lato', sans-serif;
+    margin-bottom:5%;
+  }
+  h3{
+    color:orange;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+  }
+  .left{
+    background: white;
+    width:100%;
+    max-width:250px;
+    padding:20px;
+  }
+  .right{
+    background:rgb(63, 41, 41);
+    padding: 20px;
+    width:300px;
+  }
+  .li-title{
+    color: orange;
+  }
+
+}

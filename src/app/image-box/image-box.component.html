@@ -1,0 +1,19 @@
+<div id="image-box">
+
+  <div class="left">
+    <img src="https://s27363.pcdn.co/wp-content/uploads/2017/09/Antelope-Canyon.jpg.optimal.jpg">
+    <app-title></app-title>
+  </div>
+
+  <div class="right">
+    <ul>
+      <h3>Canyon Listing</h3>
+      <li *ngFor="let canyon of canyons">
+        <span class="li-title">Name:</span> {{canyon.name}} <br>
+        <span class="li-title">Location:</span> {{canyon.location}} <br>
+        <span class="li-title"> Distance:</span> {{canyon.distance}} <br>
+      </li>
+    </ul>
+  </div>
+
+</div>
