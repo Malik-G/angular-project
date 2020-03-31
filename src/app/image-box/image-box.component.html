@@ -1,19 +1,60 @@
 <div id="image-box">
-
   <div class="left">
-    <img src="https://s27363.pcdn.co/wp-content/uploads/2017/09/Antelope-Canyon.jpg.optimal.jpg">
+    <!-- THE TWO img TAGS ARE EQUIVALENT, the second uses binding by wrapping the src attribute in [] -->
+    <!-- <img src={{coverUrl}}> -->
+    <img [src]="coverUrl">
     <app-title></app-title>
+    <!-- COULD USE [class.active]="theBox" instead of [ngClass]. USE [ngClass] when there are multiple things to change -->
+    <div class="parent-box" [ngClass]="{'active': theBox}" (dblclick)="parentClick($event)">
+      <div class="child-box" [ngClass]="{'active': theBox}" (dblclick)="childClick($event)"></div>
+    </div>
   </div>
 
   <div class="right">
+    <div>
+      <label>Username: </label>
+      <input [(ngModel)]="username" />
+    </div>
+    <div>
+      <label>Password: </label>
+      <input [(ngModel)]="password"/>
+    </div>
+    <h3>Canyon Listings</h3>
+    <div [ngSwitch]="canyons.length > 0">
+      <ul *ngSwitchCase="true">
+        <li *ngFor="let canyon of canyons">
+          <span class="li-title">Name:</span> {{canyon.name}} <br>
+          <span class="li-title">Location:</span> {{canyon.location}} <br>
+          <span class="li-title"> Distance:</span> {{canyon.distance}} <br>
+        </li>
+      </ul>
+      <ul *ngSwitchDefault>
+        <p>Sorry, no listings available</p>
+      </ul>
+    </div>
+    <!-- COULD USE [style.backgroundColor]="pushed ? 'green' : 'firebrick'" -->
+    <div class="button" (click)="showBox()" [ngStyle]="{'backgroundColor': pushed ? 'green' : 'firebrick' }">Show</div>
+  </div>
+</div>
+
+<!-- BLOCK BELOW IS THE SAME AS ABOVE BUT USING #ngIf and ng-template instead of [ngSwitch]-->
+<!-- <div class="right">
+    <h3>Canyon Listings</h3>
+    
+    <div *ngIf="canyons.length > 0; then showListings else hideListings"></div>
+    <ng-template #showListings>
     <ul>
-      <h3>Canyon Listing</h3>
       <li *ngFor="let canyon of canyons">
         <span class="li-title">Name:</span> {{canyon.name}} <br>
         <span class="li-title">Location:</span> {{canyon.location}} <br>
         <span class="li-title"> Distance:</span> {{canyon.distance}} <br>
       </li>
     </ul>
-  </div>
+    </ng-template>
+    <ng-template #hideListings>
+    <ul>
+      <p>Sorry, no listings available</p>
+    </ul>
+    </ng-template>
 
-</div>
+  </div> -->
