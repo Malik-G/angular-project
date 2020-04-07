@@ -1,0 +1,41 @@
+<div id="tabs-component">
+  <div class="header">
+    <div class="container">
+      <ul class="tab-list">
+        <li class="tab" [class.active]="currentActive == 1" (click)="tabClick(1)">Tab 1</li>
+        <li class="tab" [class.active]="currentActive == 2" (click)="tabClick(2)">Tab 2</li>
+        <li class="tab" [class.active]="currentActive == 3" (click)="tabClick(3)">Tab 3</li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container" [ngSwitch]="currentActive">
+      <div class="textarea" *ngSwitchCase="1">
+        <h2>Tab 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum facilis repellendus 
+          vel ad corrupti explicabo culpa placeat sapiente laudantium dignissimos esse enim 
+          voluptatum pariatur quod, assumenda, animi dolores, dicta minima.
+        </p>
+        <p>Tab 1 text</p>
+      </div>
+      <div class="textarea" *ngSwitchCase="2">
+        <h2>Tab 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum facilis repellendus
+          vel ad corrupti explicabo culpa placeat sapiente laudantium dignissimos esse enim
+          voluptatum pariatur quod, assumenda, animi dolores, dicta minima.
+        </p>
+        <p>Tab 2 text</p>
+      </div>
+      <div class="textarea" *ngSwitchCase="3">
+        <h2>Tab 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum facilis repellendus
+          vel ad corrupti explicabo culpa placeat sapiente laudantium dignissimos esse enim
+          voluptatum pariatur quod, assumenda, animi dolores, dicta minima.
+        </p>
+        <p>Tab 3 text</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,37 @@
+#tabs-component{
+  font-family: sans-serif;
+  .container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .header{
+    background: rgb(162, 190, 218);
+    .tab-list{
+      display: flex;
+      .tab{
+        padding:10px;
+        color:white;
+        min-width:100px;
+        list-style: none;
+        &.active{
+          background: whitesmoke;
+          color:black;
+          font-weight:500;
+        }
+      }
+    }
+  }
+  .content{
+    background: whitesmoke;
+    padding: 20px;
+    .textarea{
+      background: white;
+      padding: 20px;
+      box-shadow: 0px 33px 23px -34px rgba(0,0,0,0.50);
+      p{
+        margin-bottom: 1.5rem;
+        line-height:1.5;
+      }
+    }
+  }
+}
