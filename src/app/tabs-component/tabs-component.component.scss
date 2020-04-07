@@ -1,11 +1,13 @@
 #tabs-component{
   font-family: sans-serif;
+  margin-bottom: 20px;
   .container{
     width: 90%;
     margin: 0 auto;
   }
   .header{
     background: rgb(162, 190, 218);
+    padding-top:4px;
     .tab-list{
       display: flex;
       .tab{
@@ -17,6 +19,12 @@
           background: whitesmoke;
           color:black;
           font-weight:500;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+          -webkit-border-top-right-radius: 5px;
+          -webkit-border-top-left-radius: 5px;
+          -moz-border-top-right-radius: 5px;
+          -moz-border-top-left-radius: 5px;
         }
       }
     }
@@ -28,6 +36,8 @@
       background: white;
       padding: 20px;
       box-shadow: 0px 33px 23px -34px rgba(0,0,0,0.50);
+      -webkit-box-shadow: 0px 33px 23px -34px rgba(0,0,0,0.50);
+      -moz-box-shadow: 0px 33px 23px -34px rgba(0,0,0,0.50);
       p{
         margin-bottom: 1.5rem;
         line-height:1.5;
