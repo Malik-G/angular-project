@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleComponent } from './title.component';
+import { MasterButtonComponent } from './master-button.component';
 
-describe('TitleComponent', () => {
-  let component: TitleComponent;
-  let fixture: ComponentFixture<TitleComponent>;
+describe('MasterButtonComponent', () => {
+  let component: MasterButtonComponent;
+  let fixture: ComponentFixture<MasterButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TitleComponent ]
+      declarations: [ MasterButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TitleComponent);
+    fixture = TestBed.createComponent(MasterButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

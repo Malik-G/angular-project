@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Type } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Cool Canyons Club';
+  mainTitle = 'Cool Canyons Club';
+
+  // This function gets triggered by an EventEmmiter named customEmmiter located in the <master-button> child component
+  customEvent(type: string) {
+    alert(type);
+  }
+
+  // Used for the other example of passing props
+  // parentAlert(type: string) {
+  //   alert(type);
+  // }
 }

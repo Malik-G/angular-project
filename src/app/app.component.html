@@ -1,2 +1,33 @@
+<p>{{mainTitle}}</p>
+<!--  -->
+<app-image-box></app-image-box>
+<!--  -->
 <app-tabs-component></app-tabs-component>
+<!--  -->
+
+<!-- (alertTrigger) is the custom EventEmmitter -->
+<div class="buttons-box">
+  <master-button [type]="'primary'" [title]="'save'" (customEmmiter)="customEvent($event)"></master-button>
+  <master-button [type]="'danger'" [title]="'delete'" (customEmmiter)="customEvent($event)"></master-button>
+  <master-button [type]="'warning'" [title]="'warning'" (customEmmiter)="customEvent($event)"></master-button>
+  <master-button [type]="'success'" [title]="'success'" (customEmmiter)="customEvent($event)"></master-button>
+</div>
+
+<!-- Setting [parentAlertPassToChild] equal to parentAlert here is akin to passing a parent function to a child component in React  -->
+<!-- <div class="buttons-box">
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'primary'" [title]="'save'"></master-button>
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'danger'" [title]="'delete'"></master-button>
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'warning'" [title]="'warning'"></master-button>
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'success'" [title]="'success'"></master-button>
+</div> -->
+
+<!-- If the <master-button> child component were to use ng-content in its .html file instead of string interpolation,
+  we could get rid of the [title] property used in this file-->
+<!-- <div class="buttons-box">
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'primary'">save</master-button>
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'danger'">delete</master-button>
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'warning'">warning</master-button>
+  <master-button [parentAlertPassToChild]="parentAlert" [type]="'success'">success</master-button>
+</div> -->
+<!--  -->
 <router-outlet></router-outlet>

@@ -1,0 +1,29 @@
+
+<!-- Example of using a custom EventEmitter called clickedButton(type) -->
+<div id="master-button" (click)="triggerParentFunction(type)" [ngClass]="{
+  'primary': type == 'primary',
+  'danger': type == 'danger',
+  'warning': type == 'warning',
+  'success': type == 'success'}">
+  {{title}}
+</div>
+
+<!-- This block of code is used when following the example of passing properties from parent to child, -->
+<!-- meaning the parentAlertPassToChild property has to be uncommented in master-button.component.ts and -->
+<!-- re-added as a binded element property in app.component.html, i.e. [parentAlertPassToChild]="parentAlert" -->
+<!-- <div id="master-button" (click)="parentAlertPassToChild(type)" [ngClass]="{
+  'primary': type == 'primary',
+  'danger': type == 'danger',
+  'warning': type == 'warning',
+  'success': type == 'success'}">
+  {{title}}
+</div> -->
+
+<!-- ng-content allows for content to be defined in a component's parent versus itself -->
+<!-- <div id="master-button" (click)="parentAlertPassToChild(type)" [ngClass]="{
+  'primary': type == 'primary',
+  'danger': type == 'danger',
+  'warning': type == 'warning',
+  'success': type == 'success'}">
+  <ng-content></ng-content>
+</div> -->

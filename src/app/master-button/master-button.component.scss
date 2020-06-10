@@ -1,0 +1,26 @@
+#master-button{
+  padding: 20px 40px;
+  color:white;
+  background: black;
+  border-radius:4px;
+  text-transform: uppercase;
+  margin: 5px 3px;
+  font-family: 'Gill Sans';
+  &.primary{
+    background: skyblue;
+    color:black;
+  }
+  &.danger{
+    background: tomato;
+    color:black;
+  }
+  &.warning{
+    background: goldenrod;
+    color:black;
+  }
+  &.success{
+    background: forestgreen;
+    color:black;
+  }
+
+}
