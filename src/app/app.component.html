@@ -1,17 +1,19 @@
-<p>{{mainTitle}}</p>
+<!-- <p>{{mainTitle}}</p> -->
 <!--  -->
-<app-image-box></app-image-box>
+
+<!-- <app-image-box></app-image-box> -->
 <!--  -->
-<app-tabs-component></app-tabs-component>
+
+<!-- <app-tabs-component></app-tabs-component> -->
 <!--  -->
 
 <!-- (alertTrigger) is the custom EventEmmitter -->
-<div class="buttons-box">
+<!-- <div class="buttons-box">
   <master-button [type]="'primary'" [title]="'save'" (customEmmiter)="customEvent($event)"></master-button>
   <master-button [type]="'danger'" [title]="'delete'" (customEmmiter)="customEvent($event)"></master-button>
   <master-button [type]="'warning'" [title]="'warning'" (customEmmiter)="customEvent($event)"></master-button>
   <master-button [type]="'success'" [title]="'success'" (customEmmiter)="customEvent($event)"></master-button>
-</div>
+</div> -->
 
 <!-- Setting [parentAlertPassToChild] equal to parentAlert here is akin to passing a parent function to a child component in React  -->
 <!-- <div class="buttons-box">
@@ -30,4 +32,15 @@
   <master-button [parentAlertPassToChild]="parentAlert" [type]="'success'">success</master-button>
 </div> -->
 <!--  -->
-<router-outlet></router-outlet>
+
+<!-- if RouterModule is being used in app.module.ts <app-bootstrap-home> is not needed, as <router-outlet> is rendering the view -->
+<!-- <app-bootstrap-home></app-bootstrap-home> -->
+
+<app-header></app-header>
+
+<div class="container">
+  <router-outlet></router-outlet>
+  <app-nav-button></app-nav-button>
+  <app-footer></app-footer>
+</div>
+
